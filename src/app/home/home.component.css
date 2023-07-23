@@ -1,0 +1,14 @@
+h1 {
+    text-align: center;
+  }
+  img {
+    max-width: 40%;
+    display: block;
+    margin: 20px auto;
+  }
+  p {
+    text-align: justify;
+    max-width: 60%;
+    margin: 20px auto;
+
+  }
