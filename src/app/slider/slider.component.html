@@ -1,0 +1,34 @@
+<!-- <div>
+    <h2>Image Slider</h2>
+    <div class="slider-container">
+      <div class="image-container">
+        <img [src]="clipPath1" [style.clip-path]="image1ClipPath" >
+      </div>
+      <div class="image-container">
+        <img [src]="clipPath2" [style.clip-path]="image2ClipPath">
+    </div>
+    <mat-slider min="0" max="100" >
+        <input matSliderThumb [(ngModel)]="sliderValue" (input)="updateClipPaths()">
+    </mat-slider>      
+</div> -->
+
+
+
+<div>
+    <h2>Image Slider</h2>
+    <div class="slider-container">
+      <div class="image-container">
+        <img [src]="clipPath1" [style.clip-path]="image1ClipPath">
+      </div>
+      <div class="image-container">
+        <img [src]="clipPath2" [style.clip-path]="image2ClipPath">
+      </div>
+    </div>
+  
+    <div class="custom-slider">
+      <button (mousedown)="startSlide('left')" (mouseup)="stopSlide()"> &lt; </button>
+      <div class="slider-track" [style.left.%]="sliderValue"></div>
+      <button (mousedown)="startSlide('right')" (mouseup)="stopSlide()"> &gt; </button>
+    </div>
+  </div>
+  
