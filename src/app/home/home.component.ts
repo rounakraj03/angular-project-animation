@@ -3,17 +3,17 @@ import { animate, style, transition, trigger, state } from '@angular/animations'
 
 
 
-// const enterTransition = transition(':enter', [style({
-//   opacity:0
-// }),
-// animate('1s ease-in', style({opacity: 1}))]);
+const enterTransition = transition(':enter', [style({
+  opacity:0
+}),
+animate('1s ease-in', style({opacity: 1}))]);
 
 // const exitTransition = transition(':leave', [style({
 //   opacity:1
 // }),
 // animate('1s ease-out', style({opacity: 0}))]);
 
-// const fadeIn = trigger('fadeIn',[enterTransition]);
+const fadeIn = trigger('fadeIn',[enterTransition]);
 // const fadeOut = trigger('fadeOut',[exitTransition]);
 
 
@@ -60,7 +60,7 @@ const slideInFromBottom = trigger('slideInFromBottom', [
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
   // animations: [fadeIn, fadeOut]
-  animations: [fadeInOut, slideInFromBottom]
+  animations: [fadeInOut, slideInFromBottom, fadeIn]
 })
 export class HomeComponent {
   showFadeOutElement = true;
