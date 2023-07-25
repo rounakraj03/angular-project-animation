@@ -1,34 +1,13 @@
-<!-- <div>
-    <h2>Image Slider</h2>
-    <div class="slider-container">
-      <div class="image-container">
-        <img [src]="clipPath1" [style.clip-path]="image1ClipPath" >
-      </div>
-      <div class="image-container">
-        <img [src]="clipPath2" [style.clip-path]="image2ClipPath">
-    </div>
-    <mat-slider min="0" max="100" >
-        <input matSliderThumb [(ngModel)]="sliderValue" (input)="updateClipPaths()">
-    </mat-slider>      
-</div> -->
+<script
+  defer
+  src="https://unpkg.com/img-comparison-slider@7/dist/index.js"
+></script>
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/img-comparison-slider@7/dist/styles.css"
+/>
 
-
-
-<div>
-    <h2>Image Slider</h2>
-    <div class="slider-container">
-      <div class="image-container">
-        <img [src]="clipPath1" [style.clip-path]="image1ClipPath">
-      </div>
-      <div class="image-container">
-        <img [src]="clipPath2" [style.clip-path]="image2ClipPath">
-      </div>
-    </div>
-  
-    <div class="custom-slider">
-      <button (mousedown)="startSlide('left')" (mouseup)="stopSlide()"> &lt; </button>
-      <div class="slider-track" [style.left.%]="sliderValue"></div>
-      <button (mousedown)="startSlide('right')" (mouseup)="stopSlide()"> &gt; </button>
-    </div>
-  </div>
-  
+<img-comparison-slider>
+  <img slot="first" [src]="image1" />
+  <img slot="second" [src]="image2" />
+</img-comparison-slider>

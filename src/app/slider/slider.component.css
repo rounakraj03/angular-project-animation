@@ -1,4 +1,4 @@
-.slider-container {
+/* .slider-container {
     position: relative;
     margin: auto;
     text-align: center;
@@ -18,4 +18,10 @@
   mat-slider {
     width: 300px;
   }
-  
+   */
+
+  img-comparison-slider {
+    --divider-width: 2px;
+    --divider-color: #c0c0c0;
+    --default-handle-opacity: 0.3;
+  }
